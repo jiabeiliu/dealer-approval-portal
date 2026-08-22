@@ -36,3 +36,10 @@ Requirements:
 4. Updated metadata and responsive styling.
 5. Ran final code and production-build checks; the local build runner did not complete within the validation window.
 6. Verified locally: the development server starts successfully, dealer requests can be submitted and reviewed, and approval status persists after refresh.
+   
+## Screenshots
+
+<img width="2532" height="1936" alt="4d50ff853c8ac6e65c8a66575dad3a9c" src="https://github.com/user-attachments/assets/79378332-d9ea-4024-9a99-3f5100e0b204" />
+<img width="1932" height="1936" alt="e6b0cc81a6390896ddfa46c5c3b62aef" src="https://github.com/user-attachments/assets/7c67517c-b749-4e1c-abe6-9493dd9af9ee" />
+<img width="1932" height="1936" alt="3d89d4155863305c1c86da42d36bcdc1" src="https://github.com/user-attachments/assets/0532d135-d9f1-4403-8917-d4af3a9066cb" />
+<img width="2532" height="1936" alt="cc60aa9aacc0b98747fb9b62ac3d80de" src="https://github.com/user-attachments/assets/d3c0abee-ae6f-4f11-b23c-eda477e9f86b" />
