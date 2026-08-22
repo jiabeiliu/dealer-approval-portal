@@ -7,8 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
   const image = `${protocol}://${host}/og.png`;
-  const title = "BLUEPRINT｜全球 AI 潜水地图";
-  const description = "用洋流、季节与真实目击，找到下一次值得出发的潜水旅程。";
+  const title = "SchoolSell | Dealer Approval Portal";
+  const description = "Submit and review school sales permission requests in one simple portal.";
   return {
     title,
     description,
@@ -18,5 +18,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-CN"><body>{children}</body></html>;
+  return <html lang="en"><body>{children}</body></html>;
 }
