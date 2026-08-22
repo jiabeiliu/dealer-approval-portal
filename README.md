@@ -8,6 +8,9 @@ A two-view prototype for submitting and reviewing dealer requests to sell a prod
 pnpm install
 pnpm run dev
 ```
+Requirements:
+- Node.js >= 22.13
+
 
 ## Product flow
 
