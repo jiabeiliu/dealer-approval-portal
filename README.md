@@ -6,9 +6,20 @@ A full-stack portfolio extension of a two-view coursework prototype. The origina
 
 [Open the public SchoolSell demo](https://schoolsell-dealer-approval.nicoleliuuuuu.chatgpt.site/). Anyone with the link can try the dealer form using **fictional data only**. The admin tab still requires a signed-in account whose email is configured in the server-side `ADMIN_EMAILS` allowlist; it does not reveal request data to other visitors.
 
-![Current server-backed dealer form](public/demo-dealer.png)
+### Complete workflow walkthrough
 
-Suggested walkthrough: enter fictional dealer and school details, submit, note the reference number, then sign in as an allowlisted demo administrator to review and approve or deny the pending request. Do not submit real personal or school data. The screenshot above is from the current server-backed version, not the earlier `localStorage` prototype.
+These are screenshots of the current Worker and an **isolated local D1 database**, using fictional data. For the admin screenshots, a local test proxy supplied the allowlisted `admin@example.com` identity header. That simulates the hosting platform's authenticated identity; it does **not** mean public visitors can access the production admin panel. No real dealer or school records appear here.
+
+1. Fill the [dealer request form](docs/demo-02-filled-request.jpg) with fictional information.
+2. Submit it and receive a [saved reference number](docs/demo-03-submitted.jpg).
+3. An authorized demo admin sees the [pending request](docs/demo-04-admin-pending.jpg).
+4. The admin records a decision; the [approved state](docs/demo-05-admin-approved.jpg) is saved in D1.
+
+![Fictional dealer request submitted](docs/demo-03-submitted.jpg)
+![Pending request in the local administrator walkthrough](docs/demo-04-admin-pending.jpg)
+![Approved request in the local administrator walkthrough](docs/demo-05-admin-approved.jpg)
+
+The [blank form screenshot](docs/demo-01-form.jpg) is also available. The public demo lets anyone submit fictional requests, but administrator review requires a separately configured, signed-in allowlisted account. No email notification is sent.
 
 ## How it works
 
