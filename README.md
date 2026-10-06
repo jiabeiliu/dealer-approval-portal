@@ -2,6 +2,14 @@
 
 A full-stack portfolio extension of a two-view coursework prototype. The original assignment asked for a browser-only dealer form and staff review page. This version adds server-side request storage, API validation, and administrator authorization. It remains a **demo**, not a real school-sales service; use sample information only.
 
+## Demo
+
+[Open the SchoolSell demo](https://schoolsell-dealer-approval.nicoleliuuuuu.chatgpt.site/) (currently owner-only; public visitors cannot access it yet). The dealer form accepts sample requests. The admin tab requires a signed-in account whose email is configured in the server-side `ADMIN_EMAILS` allowlist; it does not reveal request data to other visitors.
+
+![Current server-backed dealer form](public/demo-dealer.png)
+
+Suggested walkthrough: enter fictional dealer and school details, submit, note the reference number, then sign in as an allowlisted demo administrator to review and approve or deny the pending request. Do not submit real personal or school data. The screenshot above is from the current server-backed version, not the earlier `localStorage` prototype.
+
 ## How it works
 
 ```text
@@ -34,7 +42,7 @@ The local Wrangler command can simulate the platform-provided identity header fo
 
 ## Data and deployment
 
-The Drizzle schema is in `db/schema.ts`; the generated migration is under `drizzle/`. `.openai/hosting.json` identifies a **dedicated SchoolSell Site** and declares its logical D1 binding. The Site has not been published merely by committing code; confirm the live deployment and access policy before sharing a URL.
+The Drizzle schema is in `db/schema.ts`; the generated migration is under `drizzle/`. `.openai/hosting.json` identifies a **dedicated SchoolSell Site** and declares its logical D1 binding. The current version is deployed at the demo link above, with owner-only access. Publishing a commit alone does not update that deployment; confirm the live version and access policy before sharing it as a public demo.
 
 The public form has bounded field lengths and a product allowlist. Admin reads are capped at 200 most recent requests. Production hardening would add rate limiting, abuse prevention, pagination, retention/deletion controls, and a real notification channel. No seeded customer/dealer data is committed to the database, and no email is sent. The earlier browser-only screenshots are not evidence of this server-backed version.
 
