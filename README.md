@@ -2,6 +2,8 @@
 
 A two-view prototype for submitting and reviewing dealer requests to sell a product to a school. Data is stored in the browser with `localStorage`; there is no server or login flow.
 
+Deployment note: `.openai/hosting.json` currently contains a project ID for an unrelated site. Do not deploy using that manifest until the portal has its own hosting project ID.
+
 ## Run locally
 
 ```bash
@@ -10,6 +12,8 @@ pnpm run dev
 ```
 Requirements:
 - Node.js >= 22.13
+
+Run the production build and smoke test with `pnpm test`.
 
 
 ## Product flow
@@ -34,7 +38,7 @@ Requirements:
 2. Replaced the previous demo with the dealer submission and admin review views.
 3. Added local persistence, sample requests, validation, filters, search, and decisions.
 4. Updated metadata and responsive styling.
-5. Ran final code and production-build checks; the local build runner did not complete within the validation window.
+5. Confirmed the production build and a server-rendered smoke test pass locally.
 6. Verified locally: the development server starts successfully, dealer requests can be submitted and reviewed, and approval status persists after refresh.
    
 ## Screenshots
